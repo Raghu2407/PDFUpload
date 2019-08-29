@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>PDF file upload using php by | Rags Codemaster</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<style>
+<!-- /*pre {
+    position: absolute;
+    padding: 1px 5px;
+    background: #e8e6e3;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #555;
+    content: attr(class);
+    font-size: .9rem;
+    border: solid 1px rgba(51,51,51,0.12);
+    border-top: none;
+    border-left: none;
+} -->
+html{
+font-family:'Roboto', sans-serif;
+}
+.html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  .html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  .html {
+    font-size: 22px;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+</head>
+<body class="grey lighten-5">
+<div class="row">
+<div class="center">
+<h5 class="blue-text">It's Me Rags Codemaster</h5>
+<p class="grey-text text-darken-1">Hey Dev's I wanted to share piece of code how to upload PDF using PHP</p>
+</div>
+<div class="container">
+
+<div class="col s12 m8 offset-m2 card-panel grey darken-4">
+<p class="grey-text text-lighten-2">Code Snippet<i onclick="myFunction()"  class="material-icons right white-text">file_copy</i></p>
+<pre>
+<textarea readonly id="myInput" rows="20" style="max-width:100%;height:auto;"  class="green-text text-darken-1 language-markup copy-code myInput" >
+&lt;div class="row"&gt;
+&lt;div class="col s12 m8 offset-m2"&gt;
+&lt; div class="card-panel"&gt;
+&lt;form method="POST" enctype="multipart/form-data"&gt;
+&lt;div class="row"&gt;
+&lt;div class="input-field col s12"&gt;
+&lt;input type="text" name="filename" placeholder="Please choose file name for PDF"&gt;&lt;/div&gt;
+&lt;div class="file-field input-field col s12"&gt;&lt;div class="btn"&gt;
+&lt;span>File&lt;/span	&gt;
+&lt;input type="file" name="file"&gt;
+&lt;/div&gt;
+&lt;div class="file-path-wrapper"&gt;
+&lt;input class="file-path validate" type="text"&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class="col s12 right"&gt;
+&lt;button class="btn" type="submit" name="submit">Upload File&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/ div&gt;
+&lt;/ div &gt;
+</textarea>
+</pre>
+</div>
+<div class="col s12 m12 l12">
+<h6 class="center blue-text">For full 
+&#128104;&#8205;&#128187; click <span onclick="location.href='https://github.com/raghu2407/PDFUpload'"><u>Link</u></span> to visit</h6>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+$(document).ready(function){
+m.toast({html:Copied});
+}
+</script>
+<script>
+function myFunction(element) {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");	 
+
+  /* Alert the copied text */
+  M.toast({html:'Copied'});
+}
+</script>
+</body>
